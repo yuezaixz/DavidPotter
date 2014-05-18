@@ -18,25 +18,25 @@ import cucumber.api.java.en.When;
 public class PotterStepdefs {
     private ICalculate calc = new PriceCaclulate();
 
-    @Given("^I clear my shopping basket$")
+    @Given("^开始我先要初始化我的购物车$")
     public void I_clear_my_shopping_basket() throws Throwable {
         calc.initialize();
     }
 
-    @Given("^I buy (\\d+) copies of (\\d+)(?:st|nd|rd|th) book$")
+    @Given("^我购买 (\\d+) 系列 (\\d+)(?:st|nd|rd|th) 本书$")
     public void I_buy_copies_of_book(int numberOfBook,int seriesNumberOfBook) throws Throwable {
         System.out.println("wudw"+seriesNumberOfBook);
         calc.putIntoBasket(seriesNumberOfBook, numberOfBook);
     }
-    @When("^I calculate the price$")
+    @When("^我计算购物车的总价$")
     public void I_calculate_the_price() throws Throwable {
         calc.calculate();
     }
 
-    @Then("^I should get the lowest price (\\d+)$")
+    @Then("^我最少应该付 (\\d+)$")
     public void I_should_get_the_lowest_price(int expectedPrice) throws Throwable {
         int price = (int) (calc.getCalculatedPrice().getPrice());
-        assertEquals("failure - not the same with expected price", expectedPrice, price);
+        assertEquals("错误 - 计算结果与期望值不一致", expectedPrice, price);
     }
 
 }
