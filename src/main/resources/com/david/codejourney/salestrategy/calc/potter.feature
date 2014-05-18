@@ -8,11 +8,11 @@ Feature: Kata Potter
 
   Scenario Outline: David的Potter测试
     Given 开始我先要初始化我的购物车
-    And 我购买 <Harry Potter and the Philosopher's Stone> 系列 1st 本书
-    And 我购买 <Harry Potter and the Chamber of Secrets> 系列 2nd 本书
-    And 我购买 <Harry Potter and the Prisoner of Azkaban> 系列 3rd 本书
-    And 我购买 <Harry Potter and the Goblet of Fire> 系列 4th 本书
-    And 我购买 <Harry Potter and the Order of Phoenix> 系列 5th 本书
+    And 我购买 <Harry Potter and the Philosopher's Stone> 本 1st 系列书
+    And 我购买 <Harry Potter and the Chamber of Secrets> 本 2nd 系列书
+    And 我购买 <Harry Potter and the Prisoner of Azkaban> 本 3rd 系列书
+    And 我购买 <Harry Potter and the Goblet of Fire> 本 4th 系列书
+    And 我购买 <Harry Potter and the Order of Phoenix> 本 5th 系列书
     When 我计算购物车的总价
     Then 我最少应该付 <lowest price>
 

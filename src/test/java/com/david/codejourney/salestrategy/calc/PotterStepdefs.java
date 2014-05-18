@@ -23,7 +23,7 @@ public class PotterStepdefs {
         calc.initialize();
     }
 
-    @Given("^我购买 (\\d+) 系列 (\\d+)(?:st|nd|rd|th) 本书$")
+    @Given("^我购买 (\\d+) 本 (\\d+)(?:st|nd|rd|th) 系列书$")
     public void I_buy_copies_of_book(int numberOfBook,int seriesNumberOfBook) throws Throwable {
         System.out.println("wudw"+seriesNumberOfBook);
         calc.putIntoBasket(seriesNumberOfBook, numberOfBook);
