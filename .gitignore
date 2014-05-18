@@ -213,3 +213,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.class
+target/classes/com/david/codejourney/salestrategy/calc/potter.feature
